@@ -1,5 +1,5 @@
 <h2 class="alert alert-primary">{{productsText}}</h2>
-<div class="row"><div class="col-md-6">
+<div class="row" *ngIf="products.length>0 ; else nolist"><div class="col-md-6">
     <ul class="list-group">
     <li
     *ngFor="let prod of products.slice(0,products.length/2) let even = even; let odd = odd"
@@ -27,7 +27,7 @@
 </div></div>
 <hr>
 <h2 class="alert alert-primary">{{fruitsText}}</h2>
-<ul class="list-group">
+<ul class="list-group"*ngIf="fruits.length>0 ; else nolist">
    <li
     *ngFor="let fruit of fruits"
      class="list-group-item">
@@ -36,14 +36,14 @@
 </ul>
 <hr>
 <h2 class="alert alert-primary">{{colorsText}}</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="colors.length>0 ; else nolist">
     <li
     *ngFor="let clr of colors"
      class="list-group-item">
         {{clr}}
     </li>
 </ul>
-<hr><h2 class="alert alert-primary">{{citiesText}}</h2>
+<hr><h2 class="alert alert-primary" *ngIf="cities.length>0 ; else nolist">{{citiesText}}</h2>
 <ul class="list-group">
     <li
     *ngFor="let ct of cities"
@@ -52,7 +52,7 @@
     </li>
 </ul>
 <hr><h2 class="alert alert-primary">{{subjectsText}}</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="subjects.length>0 ; else nolist">
     <li
     *ngFor="let sub of subjects"
      class="list-group-item">
@@ -61,7 +61,7 @@
 </ul>
 <hr>
 <h2 class="alert alert-primary">{{vehiclesText}}</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="vehicles.length>0 ; else nolist">
     <li
     *ngFor="let vh of vehicles"
      class="list-group-item">
@@ -70,7 +70,7 @@
 </ul>
 <hr>
 <h2 class="alert alert-primary">{{animalsText}}</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="animals.length>0 ; else nolist">
     <li
     *ngFor="let animal of animals"
      class="list-group-item">
@@ -79,7 +79,7 @@
 </ul>
 <hr>
 <h2 class="alert alert-primary">{{sportsText}}</h2>
-<ul class="list-group">
+<ul class="list-group"*ngIf="sports.length>0 ; else nolist">
     <li
     *ngFor="let sport of sports"
      class="list-group-item">
@@ -88,7 +88,7 @@
 </ul>
 <hr>
 <h2 class="alert alert-primary">{{countriesText}}</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="countries.length>0 ; else nolist">
     <li
     *ngFor="let ctr of countries"
      class="list-group-item">
@@ -97,7 +97,7 @@
 </ul>
 <hr>
 <h2 class="alert alert-primary">{{languagesText}}</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="languages.length>0 ; else nolist">
     <li
     *ngFor="let prod of languages"
      class="list-group-item">
@@ -105,3 +105,10 @@
     </li>
 </ul>
 <hr>
+
+
+<ng-template #nolist>
+<strong class="alert alert-danger">
+    no list is available
+</strong>
+</ng-template>
