@@ -1,7 +1,10 @@
 <h2 class="alert alert-primary"> Ai cards</h2>
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of aiArr">
+    <div class="row"
+        *ngIf="aiArr.length>0 ; else nocard "
+    >
+        <div class="col-12 col-md-6 col-lg-4 mb-4" 
+        *ngFor="let ai of aiArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
                     {{ai.topic}}
@@ -21,7 +24,7 @@
 <h2 class="alert alert-primary"> Math cards</h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="mathArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of mathArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -42,7 +45,7 @@
 <h2 class="alert alert-primary"> Robot cards</h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="roboticsArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of roboticsArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -63,7 +66,7 @@
 <h2 class="alert alert-primary"> Business cards</h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="businessArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of businessArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -84,7 +87,7 @@
 <h2 class="alert alert-primary"> Geography Cards </h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="geographyArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of geographyArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -105,7 +108,7 @@
 
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="psychologyArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of psychologyArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -126,7 +129,7 @@
 <h2 class="alert alert-primary"> Biolagy Cards </h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="biologyArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of biologyArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -147,7 +150,7 @@
 <h2 class="alert alert-primary"> Tch Tools Cards </h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="techToolsArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of techToolsArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -168,7 +171,7 @@
 <h2 class="alert alert-primary"> Education Cards </h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="educationArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of educationArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -189,7 +192,7 @@
 <h2 class="alert alert-primary"> Cloud  cards</h2>
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="cloudArr.length>0 ; else nocard ">
         <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let ai of cloudArr">
             <div class="card text-center">
                 <div class="card-header tex-uppercase font-weight-bold">
@@ -206,3 +209,9 @@
         </div>
     </div>
 </div>
+
+<ng-template #nocard>
+<strong class="alert alert-danger">
+    no card is available
+</strong>
+</ng-template>
