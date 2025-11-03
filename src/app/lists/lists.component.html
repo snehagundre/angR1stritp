@@ -1,11 +1,30 @@
 <h2 class="alert alert-primary">{{productsText}}</h2>
-<ul class="list-group">
+<div class="row"><div class="col-md-6">
+    <ul class="list-group">
     <li
-    *ngFor="let prod of products"
-     class="list-group-item">
+    *ngFor="let prod of products.slice(0,products.length/2) let even = even; let odd = odd"
+     class="list-group-item"
+     [ngClass]="{
+       'bg-info':even,
+       'bg-light':odd
+    }">
         {{prod}}
     </li>
 </ul>
+</div>
+<div class="col-md-6">
+    <ul class="list-group">
+    <li
+    *ngFor="let prod of products.slice(products.length/2) let i = index"
+     class="list-group-item"
+     [ngClass]="{
+        'bg-secondary':i%2===0,
+        'bg-light' : i%2!==0
+     }">
+        {{prod}}
+    </li>
+</ul>
+</div></div>
 <hr>
 <h2 class="alert alert-primary">{{fruitsText}}</h2>
 <ul class="list-group">
