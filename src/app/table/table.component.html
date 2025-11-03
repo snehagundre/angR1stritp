@@ -1,0 +1,234 @@
+
+<h2 class="alert alert-info">Table 1</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>empId</th>
+    <th>empName</th>
+    <th>designation</th>
+    <th>department</th>
+    <th>salary</th>
+    <th>isPermanent</th>
+    <th>email</th>
+    <th>contact</th>
+ </tr>
+ <tr
+ *ngFor="let emp of empArr"
+ >
+    <td>{{emp.empId}}</td>
+    <td>{{emp.empName}}</td>
+    <td>{{emp.designation}}</td>
+    <td>{{emp.department}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.isPermanent}}</td>
+    <td>{{emp.email}}</td>
+    <td>{{emp.contact}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 2</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>rollNo</th>
+    <th>name</th>
+    <th>course</th>
+    <th>year</th>
+    <th>percentage</th>
+    <th>isPassed</th>
+    <th>email</th>
+    <th>contact</th>
+ </tr>
+ <tr
+ *ngFor="let emp of studentArr"
+ >
+    <td>{{emp.rollNo}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.course}}</td>
+    <td>{{emp.year}}</td>
+    <td>{{emp.percentage}}</td>
+    <td>{{emp.isPassed}}</td>
+    <td>{{emp.email}}</td>
+    <td>{{emp.contact}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 3</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>prodId</th>
+    <th>prodName</th>
+    <th>category</th>
+    <th>price</th>
+    <th>stock</th>
+    <th>isAvailable</th>
+    <th>brand</th>
+ </tr>
+ <tr
+ *ngFor="let emp of productArr"
+ >
+    <td>{{emp.prodId}}</td>
+    <td>{{emp.prodName}}</td>
+    <td>{{emp.category}}</td>
+    <td>{{emp.price}}</td>
+    <td>{{emp.stock}}</td>
+    <td>{{emp.isAvailable}}</td>
+    <td>{{emp.brand}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 4</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>courseId</th>
+    <th>courseName</th>
+    <th>duration</th>
+    <th>fees</th>
+    <th>mode</th>
+    <th>isActive</th>
+    <th>trainer</th>
+ </tr>
+ <tr
+ *ngFor="let emp of courseArr"
+ >
+    <td>{{emp.courseId}}</td>
+    <td>{{emp.courseName}}</td>
+    <td>{{emp.duration}}</td>
+    <td>{{emp.fees}}</td>
+    <td>{{emp.mode}}</td>
+    <td>{{emp.isActive}}</td>
+    <td>{{emp.trainer}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 5</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>bookId</th>
+    <th>title</th>
+    <th>author</th>
+    <th>price</th>
+    <th>pages</th>
+    <th>isAvailable</th>
+    <th>genre</th>
+ </tr>
+ <tr
+ *ngFor="let emp of bookArr"
+ >
+    <td>{{emp.bookId}}</td>
+    <td>{{emp.title}}</td>
+    <td>{{emp.author}}</td>
+    <td>{{emp.price}}</td>
+    <td>{{emp.pages}}</td>
+    <td>{{emp.isAvailable}}</td>
+    <td>{{emp.genre}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 6</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>custId</th>
+    <th>name</th>
+    <th>city</th>
+    <th>age</th>
+    <th>email</th>
+    <th>isPrime</th>
+    <th>contact</th>
+ </tr>
+ <tr
+ *ngFor="let emp of customerArr"
+ >
+    <td>{{emp.custId}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.city}}</td>
+    <td>{{emp.age}}</td>
+    <td>{{emp.email}}</td>
+    <td>{{emp.isPrime}}</td>
+    <td>{{emp.contact}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 7</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>orderId</th>
+    <th>customerName</th>
+    <th>product</th>
+    <th>amount</th>
+    <th>status</th>
+    <th>date</th>
+ </tr>
+ <tr
+ *ngFor="let emp of orderArr"
+ >
+    <td>{{emp.orderId}}</td>
+    <td>{{emp.customerName}}</td>
+    <td>{{emp.product}}</td>
+    <td>{{emp.amount}}</td>
+    <td>{{emp.status}}</td>
+    <td>{{emp.date}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 8</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>movieId</th>
+    <th>title</th>
+    <th>genre</th>
+    <th>rating</th>
+    <th>releaseYear</th>
+    <th>isHit</th>
+    <th>language</th>
+ </tr>
+ <tr
+ *ngFor="let emp of movieArr"
+ >
+    <td>{{emp.movieId}}</td>
+    <td>{{emp.title}}</td>
+    <td>{{emp.genre}}</td>
+    <td>{{emp.rating}}</td>
+    <td>{{emp.releaseYear}}</td>
+    <td>{{emp.isHit}}</td>
+    <td>{{emp.language}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 9</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>teacherId</th>
+    <th>name</th>
+    <th>subject</th>
+    <th>experience</th>
+    <th>salary</th>
+    <th>isFullTime</th>
+    <th>email</th>
+ </tr>
+ <tr
+ *ngFor="let emp of teacherArr"
+ >
+    <td>{{emp.teacherId}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.subject}}</td>
+    <td>{{emp.experience}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.isFullTime}}</td>
+    <td>{{emp.email}}</td>
+ </tr>
+</table>
+<h2 class="alert alert-info">Table 10</h2>
+<table class="table table-bordered">
+ <tr>
+    <th>vehicleId</th>
+    <th>brand</th>
+    <th>model</th>
+    <th>type</th>
+    <th>price</th>
+    <th>isAvailable</th>
+    <th>email</th>
+    <th>fuel</th>
+ </tr>
+ <tr
+ *ngFor="let emp of vehicleArr"
+ >
+    <td>{{emp.vehicleId}}</td>
+    <td>{{emp.brand}}</td>
+    <td>{{emp.model}}</td>
+    <td>{{emp.type}}</td>
+    <td>{{emp.price}}</td>
+    <td>{{emp.isAvailable}}</td>
+    <td>{{emp.fuel}}</td>
+ </tr>
+</table>
